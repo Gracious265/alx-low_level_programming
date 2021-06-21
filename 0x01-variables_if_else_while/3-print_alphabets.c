@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 /**
@@ -9,10 +10,9 @@ int main(void)
 {
 char abc;
 for (abc = 'a'; abc <= 'z'; abc++)
-{
-if ((abc != 'q') && (abc != 'e'))
 putchar (abc);
-}
+for (abc = 'A'; abc <= 'Z'; abc++)
+putchar (abc);
 putchar ('\n');
 return (0);
 }
