@@ -1,19 +1,21 @@
 #include "holberton.h"
 /**
-* print_alphabet_x10 - Prints the alphabet 10 times.
+* _islower - Shows 1 if the input is a
+* lowercase character. Another cases, shows 0
 *
-* Return: Always 0
+* @c: The character in ASCII code
+*
+* Return: 1 for lowercase. 0 for the rest.
 */
-void print_alphabet_x10(void)
+int _islower(int c)
 {
-	int i, a;
-
-		for (i = 0; i <= 9; i++)
+	if (c >= 97 && c <= 122)
 	{
-		for (a = 97; a <= 122; a++)
+	return (1);
+	}
+	else
 	{
-		_putchar(a);
+	return (0);
 	}
-		_putchar('\n');
-	}
+	_putchar('\n');
 }
