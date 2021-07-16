@@ -1,42 +1,25 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "holberton.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- *_calloc - allocate memory for an array usingmalloc
- * @nmemb: number ofelements
- * @size: size of bytes
- * Return: pointer
+ * _calloc - allocate an array
+ * @nmemb:int
+ * @size:int
+ * Return:void
  */
-
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-  void *ptr;
+char *x;
+unsigned int i;
 
-  if (nmemb == 0 || size == 0)
-    return (NULL);
-  ptr = malloc(nmemb * size);
-  if (ptr == NULL)
-    return (NULL);
-  _memset(ptr, 0, (nmemb * size));
-  return (ptr);
-}
-
-/**
- *_memset - sets first n bytes of the memory area
- * @s: array to set
- * @b: what to set it to
- * @n: first n bytes
- * Return: s
- */
-
-char *_memset(char *s, char b, unsigned int n)
-{
-  unsigned int i;
-
-  for (i = 0; i < n; i++)
-    {
-      s[i] = b;
-    }
-  return (s);
+if (size == 0 || nmemb == 0)
+return (NULL);
+x = malloc(size * nmemb);
+if (x == NULL)
+return (NULL);
+	for (i = 0; i < nmemb * size; i++)
+	{
+		x[i] = '\0';
+	}
+	return (x);
 }
